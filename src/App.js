@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useMemo, useState } from "react";
+import { ThemeProvider } from "styled-components";
+import Header from "./components/Header";
+import GlobalStyle, { Theme } from "./Styles";
+import Carrousel from "./views/Carrousel";
+import Input from "./views/Input";
+import ClockComponent from "./views/Clock";
 
 function App() {
+  const [selected, isSelected] = useState(0);
+
+  const renderItemComponent = useMemo(() => {
+    switch (selected) {
+      case 0:
+        return <ClockComponent />;
+      case 1:
+        return <Carrousel />;
+      case 2:
+        return <Input />;
+      case 3:
+        return (
+          <>
+            <Carrousel />
+            <ClockComponent />
+            <Input />
+          </>
+        );
+      default:
+        return <ClockComponent />;
+    }
+  }, [selected]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={Theme}>
+      <GlobalStyle />
+      <section>
+        <Header selected={selected} onChange={(id) => isSelected(id)} />
+        {renderItemComponent}
+      </section>
+    </ThemeProvider>
   );
 }
 
