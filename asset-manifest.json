@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/prueba_vinneren/static/js/main.13eadca4.chunk.js",
+    "main.js.map": "/prueba_vinneren/static/js/main.13eadca4.chunk.js.map",
+    "runtime-main.js": "/prueba_vinneren/static/js/runtime-main.341f91ae.js",
+    "runtime-main.js.map": "/prueba_vinneren/static/js/runtime-main.341f91ae.js.map",
+    "static/js/2.b833658a.chunk.js": "/prueba_vinneren/static/js/2.b833658a.chunk.js",
+    "static/js/2.b833658a.chunk.js.map": "/prueba_vinneren/static/js/2.b833658a.chunk.js.map",
+    "index.html": "/prueba_vinneren/index.html",
+    "static/js/2.b833658a.chunk.js.LICENSE.txt": "/prueba_vinneren/static/js/2.b833658a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.341f91ae.js",
+    "static/js/2.b833658a.chunk.js",
+    "static/js/main.13eadca4.chunk.js"
+  ]
+}
